@@ -1,0 +1,14 @@
+* { box-sizing: border-box; }
+body { margin: 0; font-family: Arial, sans-serif; color: #24313b; background: #f1f5f7; line-height: 1.6; }
+.header { padding: 3rem 1rem; text-align: center; background: #355c7d; color: white; }
+.layout { width: min(1100px, 92%); margin: 2rem auto; display: grid; grid-template-columns: 2fr 1fr; gap: 1.5rem; }
+main { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem; }
+article, aside { background: white; padding: 1.5rem; border-radius: 12px; }
+aside { align-self: start; }
+li { margin: .5rem 0; }
+@media (max-width: 800px) {
+    .layout { grid-template-columns: 1fr; }
+}
+@media (max-width: 560px) {
+    main { grid-template-columns: 1fr; }
+}

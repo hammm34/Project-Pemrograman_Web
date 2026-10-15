@@ -1,0 +1,57 @@
+$utama: #6f4e37;
+$terang: #f4eee8;
+$gelap: #2b211a;
+$radius: 14px;
+
+* { box-sizing: border-box; }
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: $gelap;
+    background: $terang;
+}
+
+@mixin panel($padding: 1.5rem) {
+    padding: $padding;
+    background: white;
+    border-radius: $radius;
+}
+
+.header {
+    padding: 4rem 1rem;
+    text-align: center;
+    background: $utama;
+    color: white;
+
+    h1 { margin-bottom: .25rem; }
+}
+
+.container {
+    width: min(1000px, 92%);
+    margin: 0 auto;
+    padding: 3rem 0;
+}
+
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+}
+
+.menu-card {
+    @include panel();
+
+    &:hover {
+        box-shadow: 0 10px 25px rgba(0,0,0,.1);
+    }
+
+    strong {
+        color: $utama;
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 700px) {
+    .menu-grid { grid-template-columns: 1fr; }
+}

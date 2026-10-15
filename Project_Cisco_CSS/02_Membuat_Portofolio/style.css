@@ -1,0 +1,15 @@
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin: 0; font-family: Arial, sans-serif; color: #20242a; background: #f5f7fa; line-height: 1.6; }
+.header { background: #16243a; color: white; padding: 1rem; }
+nav { display: flex; justify-content: center; gap: 1.5rem; flex-wrap: wrap; }
+nav a { color: white; text-decoration: none; }
+nav a:hover { text-decoration: underline; }
+.intro { max-width: 850px; margin: 5rem auto; text-align: center; }
+.intro h1 { font-size: clamp(2.5rem, 7vw, 4.5rem); margin: .25rem 0; }
+.container { width: min(950px, 92%); margin: 0 auto; }
+.section { padding: 3rem 0; }
+.section h2 { color: #16243a; }
+.skills { display: flex; gap: .75rem; flex-wrap: wrap; }
+.skills span { padding: .6rem 1rem; background: #dce7f7; border-radius: 999px; }
+.project { background: white; margin: 1rem 0; padding: 1.25rem; border-left: 5px solid #4d7abf; border-radius: 8px; }

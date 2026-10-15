@@ -1,0 +1,21 @@
+* { box-sizing: border-box; }
+body { margin: 0; font-family: Arial, sans-serif; background: #eef2f7; color: #222; }
+.header { padding: 4rem 1rem; text-align: center; background: #263238; color: white; animation: muncul 900ms ease-out; }
+.container { width: min(1000px, 92%); margin: auto; padding: 3rem 0; }
+.cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; }
+.card { padding: 2rem; background: white; border-radius: 14px; transition: transform .25s ease, box-shadow .25s ease; }
+.card:hover { transform: translateY(-8px) scale(1.01); box-shadow: 0 14px 28px rgba(0,0,0,.14); }
+.icon { display: inline-grid; place-items: center; width: 54px; height: 54px; border-radius: 50%; background: #dde7ef; animation: berdenyut 2s ease-in-out infinite; }
+.card a { text-decoration: none; }
+.card a:hover { text-decoration: underline; }
+@keyframes muncul {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+@keyframes berdenyut {
+    50% { transform: scale(1.08); }
+}
+@media (max-width: 750px) { .cards { grid-template-columns: 1fr; } }
+@media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after { scroll-behavior: auto !important; animation-duration: .01ms !important; transition-duration: .01ms !important; }
+}

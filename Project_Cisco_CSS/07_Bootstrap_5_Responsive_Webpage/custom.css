@@ -1,0 +1,4 @@
+body { line-height: 1.6; }
+header { background: linear-gradient(135deg, #222, #495057); }
+.card { transition: transform .2s ease; }
+.card:hover { transform: translateY(-4px); }
